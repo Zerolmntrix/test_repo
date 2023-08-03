@@ -1,4 +1,4 @@
-@source "https://asuralightnove.com/"
+@source "https://asuralightnovel.com/"
 
 @fun getSpotlightNovels()
     @url "?s&post_type=wp-manga&m_orderby=trending"
