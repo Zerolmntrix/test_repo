@@ -1,15 +1,7 @@
 @source "https://asuralightnovel.com/"
 
 @fun getSpotlightNovels()
-    @url "?s&post_type=wp-manga&m_orderby=trending"
-       @var title -> @selector ".tab-content-wrap div.col-8.col-12.col-md-10 div.post-title > h3 > a"
-       @var link -> @selector ".tab-content-wrap div.col-8.col-12.col-md-10 div.post-title > h3 > a@href"
-       @var cover -> @selector ".tab-content-wrap div.col-4.col-12.col-md-2 a > img@data-src"
-    @return Novel()
-
-
-@fun getPopularNovels()
-    @url "?s&post_type=wp-manga&m_orderby=trending"
+    @url "?s&post_type=wp-manga&m_orderby=views"
        @var title -> @selector ".tab-content-wrap div.col-8.col-12.col-md-10 div.post-title > h3 > a"
        @var link -> @selector ".tab-content-wrap div.col-8.col-12.col-md-10 div.post-title > h3 > a@href"
        @var cover -> @selector ".tab-content-wrap div.col-4.col-12.col-md-2 a > img@data-src"
@@ -17,6 +9,13 @@
 
 @fun getLatestNovels()
     @url "?s&post_type=wp-manga&m_orderby=latest"
+       @var title -> @selector ".tab-content-wrap div.col-8.col-12.col-md-10 div.post-title > h3 > a"
+       @var link -> @selector ".tab-content-wrap div.col-8.col-12.col-md-10 div.post-title > h3 > a@href"
+       @var cover -> @selector ".tab-content-wrap div.col-4.col-12.col-md-2 a > img@data-src"
+    @return Novel()
+
+@fun getPopularNovels()
+    @url "?s&post_type=wp-manga&m_orderby=trending"
        @var title -> @selector ".tab-content-wrap div.col-8.col-12.col-md-10 div.post-title > h3 > a"
        @var link -> @selector ".tab-content-wrap div.col-8.col-12.col-md-10 div.post-title > h3 > a@href"
        @var cover -> @selector ".tab-content-wrap div.col-4.col-12.col-md-2 a > img@data-src"
